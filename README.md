@@ -65,8 +65,7 @@ To run the project on your machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/futurecode-backend-assignment.git
-cd futurecode-backend-assignment
+https://github.com/ApsaraWitharana/Simple-Rest-API.git
 ```
 
 ## License
