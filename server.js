@@ -62,10 +62,10 @@ app.use('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📱 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`🔐 Auth endpoints: http://localhost:${PORT}/api/auth`);
-  console.log(`📦 Product endpoints: http://localhost:${PORT}/api/products`);
+  console.log(` Server running on port ${PORT}`);
+  console.log(` Health check: http://localhost:${PORT}/api/health`);
+  console.log(` Auth endpoints: http://localhost:${PORT}/api/auth`);
+  console.log(` Product endpoints: http://localhost:${PORT}/api/products`);
 });
 
 module.exports = app;
