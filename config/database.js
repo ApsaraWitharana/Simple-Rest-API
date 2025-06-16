@@ -6,7 +6,7 @@ const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
   port: process.env.DB_PORT || 3306,
   user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
+  password: process.env.DB_PASSWORD || 'ijse@2001',
   database: process.env.DB_NAME || 'rest_api_db',
   waitForConnections: true,
   connectionLimit: 10,
@@ -32,9 +32,9 @@ async function initDatabase() {
 
     // Create tables
     await createTables();
-    console.log('✅ Database initialized successfully');
+    console.log(' Database initialized successfully');
   } catch (error) {
-    console.error('❌ Database initialization error:', error);
+    console.error(' Database initialization error:', error);
     process.exit(1);
   }
 }
@@ -69,9 +69,9 @@ async function createTables() {
       )
     `);
 
-    console.log('✅ Tables created successfully');
+    console.log(' Tables created successfully');
   } catch (error) {
-    console.error('❌ Table creation error:', error);
+    console.error(' Table creation error:', error);
     throw error;
   } finally {
     connection.release();
@@ -84,10 +84,10 @@ async function testConnection() {
     const connection = await pool.getConnection();
     await connection.ping();
     connection.release();
-    console.log('✅ Database connection successful');
+    console.log('Database connection successful');
     return true;
   } catch (error) {
-    console.error('❌ Database connection failed:', error);
+    console.error(' Database connection failed:', error);
     return false;
   }
 }
